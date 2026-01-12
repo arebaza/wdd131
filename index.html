@@ -2,97 +2,88 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="WDD 131 Home Page for Armando Rebaza: weekly learning activities, assignments, and course project in Dynamic Web Fundamentals.">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 Temple Album demonstrating responsive design, CSS Grid, and a hamburger menu.">
   <meta name="author" content="Armando Rebaza">
+  <title>Temple Album | WDD 131</title>
 
-  <!-- Required title content: student name + WDD 131 + Dynamic Web Fundamentals -->
-  <title>Armando Rebaza | WDD 131: Dynamic Web Fundamentals</title>
-
-  <!-- Google Fonts (required by audit) -->
+  <!-- Google Fonts (required by audit, no @import allowed) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="styles/base.css">
-  <script defer src="scripts/getdates.js"></script>
+  <!-- REQUIRED: Two CSS files -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- JavaScript -->
+  <script defer src="scripts/temples.js"></script>
 </head>
 
 <body>
   <a class="skip-link" href="#main">Skip to main content</a>
 
   <header class="site-header">
-    <div class="brand">
-      <p class="brand-title">Armando Rebaza</p>
+    <div class="header-bar">
+      <p class="site-title">Temple Album</p>
 
-      <!-- Required by audit -->
-      <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+      <!-- Hamburger button (mobile only) -->
+      <button id="menu" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
     </div>
 
-    <!-- Nav must contain at least 4 links -->
-    <nav class="site-nav" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a>
-      <a href="week01/basic-layout.html">Week 01</a>
-      <a href="week02/" title="Coming soon">Week 02</a>
-      <a href="week03/" title="Coming soon">Week 03</a>
-      <a href="week04/" title="Coming soon">Week 04</a>
-      <a href="week05/" title="Coming soon">Week 05</a>
-      <a href="project/" title="Coming soon">Project</a>
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="active" href="temples.html">Home</a>
+      <a href="#">Old</a>
+      <a href="#">New</a>
+      <a href="#">Large</a>
+      <a href="#">Small</a>
     </nav>
   </header>
 
-  <main id="main" class="layout">
-    <!-- Required: two sections with class="card" -->
-    <section class="card">
-      <h1>Armando Rebaza | WDD 131 Home Page</h1>
+  <main id="main">
+    <h1>Home</h1>
 
-      <h2>About Me</h2>
-      <p>
-        My name is <strong>Armando Rebaza</strong>, and I was born and raised in Arequipa, Peru. I am married to my wife,
-        Jessica, and we are blessed with three wonderful children. As a family, we enjoy learning, serving, and supporting
-        each other’s goals. I’m excited to build my web development skills this term and create clean, accessible, and
-        responsive pages.
-      </p>
-
-      <div class="profile">
-        <img src="images/armandor.jpg"
-             alt="Portrait of Armando Rebaza"
-             width="300"
-             height="400"
-             loading="lazy">
-
-        <p class="note">
-          Tip: Use the navigation links above to access each week’s work as you complete it.
-        </p>
-      </div>
+    <!-- CSS Grid gallery -->
+    <section class="gallery" aria-label="Temple photo gallery">
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
+      <figure>
+        <img src="images/temple.webp" alt="San Diego California Temple" loading="lazy" width="640" height="360">
+        <figcaption>San Diego California</figcaption>
+      </figure>
     </section>
-
-    <section class="card">
-      <h2>About Peru</h2>
-      <p>
-        Peru is a country on the west coast of South America with an amazing mix of landscapes: coast, mountains, and jungle.
-        It has a long history shaped by ancient civilizations like the Incas. Peru is known for Machu Picchu, Lake Titicaca,
-        and beautiful cities such as Lima, Cusco, and Arequipa. Peruvian food is famous around the world, and the people are
-        known for their warmth and strong community values.
-      </p>
-
-      <h2>Course Links</h2>
-      <ul class="link-list">
-        <li><a href="https://byui-cse.github.io/wdd131-ww-course/" target="_blank" rel="noopener noreferrer">Course Materials</a></li>
-        <li><a href="https://validator.w3.org/" target="_blank" rel="noopener noreferrer">HTML Validator</a></li>
-        <li><a href="https://jigsaw.w3.org/css-validator/" target="_blank" rel="noopener noreferrer">CSS Validator</a></li>
-      </ul>
-    </section>
-
-    <aside class="card">
-      <h2>Weekly Goals</h2>
-      <ul class="checklist">
-        <li>Follow naming conventions</li>
-        <li>Validate HTML and CSS</li>
-        <li>Check Lighthouse (Accessibility, Best Practices, SEO)</li>
-        <li>Commit and push changes to GitHub</li>
-      </ul>
-    </aside>
   </main>
 
   <footer class="site-footer">
