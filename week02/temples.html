@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 Temple Album page with responsive layout and hamburger menu.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Temple Album | WDD 131</title>
+
+  <!-- Google Fonts (required: use <link>, not @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Mobile-first CSS order -->
+  <link rel="stylesheet" href="styles/temples.css">
+  <link rel="stylesheet" href="styles/temples-large.css">
+
+  <!-- Deferred JS -->
+  <script defer src="scripts/temples.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <div class="header-bar">
+      <p class="site-title">Temple Album</p>
+
+      <!-- Hamburger button: shown only in mobile view -->
+      <button id="menu" class="menu-btn" type="button" aria-label="Open menu" aria-expanded="false">
+        <span class="menu-icon" aria-hidden="true"></span>
+      </button>
+    </div>
+
+    <nav id="primary-nav" class="site-nav" aria-label="Primary navigation">
+      <a class="active" href="temples.html">Home</a>
+      <a href="#" data-filter="old">Old</a>
+      <a href="#" data-filter="new">New</a>
+      <a href="#" data-filter="large">Large</a>
+      <a href="#" data-filter="small">Small</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <h1>Home</h1>
+
+    <!-- Gallery container uses CSS Grid -->
+    <section class="gallery" aria-label="Temple photo gallery">
+      <!-- NOTE: Replace image paths with your own optimized temple images.
+           You may reuse a placeholder image early in the course if needed. -->
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+
+      <figure>
+        <img src="images/temple.webp" alt="Los Olivos Temple" loading="lazy" width="640" height="360">
+        <figcaption>Los Olivos Peru</figcaption>
+      </figure>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Armando Rebaza | WDD 131</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>
