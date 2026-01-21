@@ -1,0 +1,154 @@
+/* place.css
+   Mobile-first layout to match the provided wireframe:
+   Title -> Image -> Data -> Weather -> Footer
+*/
+
+:root{
+  --bg: #f4f6fb;
+  --text: #1b1b1f;
+  --muted: #5a5d69;
+  --card: #ffffff;
+  --border: #d6d9f0;
+  --brand: #2a0d4d;
+  --shadow: 0 6px 16px rgba(0,0,0,0.08);
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body{
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Skip link for accessibility */
+.skip-link{
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  z-index: 10;
+}
+.skip-link:focus{
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* Header (wireframe: Place Title) */
+.site-header{
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+#course-title{
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.place-title{
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+/* Main page stack (wireframe mobile view) */
+.page{
+  display: grid;
+  gap: 1rem;
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Image block (wireframe: Small Image) */
+.hero{
+  margin: 0;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  background: var(--card);
+}
+
+.hero img{
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Card blocks (Data, Weather) */
+.card{
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.card h2{
+  margin: 0 0 0.75rem;
+  text-align: center;
+  color: var(--brand);
+}
+
+/* Label/value layout */
+.kv{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.75rem;
+  margin: 0;
+}
+
+.kv dt{
+  font-weight: 700;
+  color: var(--text);
+}
+
+.kv dd{
+  margin: 0;
+  color: var(--muted);
+  text-align: right;
+}
+
+/* Weather header with icon */
+.weather-header{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  margin-bottom: 0.75rem;
+}
+
+.weather-summary{
+  margin: 0;
+  font-weight: 700;
+  color: var(--brand);
+}
+
+.note{
+  margin: 0.75rem 0 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+/* Footer (wireframe: standard footer content) */
+.site-footer{
+  background: var(--brand);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer p{
+  margin: 0.25rem 0;
+}

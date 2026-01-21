@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 Place Page featuring Peru with data and weather information.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru | Place Page</title>
+
+  <!-- Google Fonts (no @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles/place.css">
+  <link rel="stylesheet" href="styles/place-large.css">
+
+  <!-- Script -->
+  <script defer src="scripts/place.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <header class="site-header">
+    <!-- Required by some audit tools -->
+    <span id="course-title">WDD 131: Dynamic Web Fundamentals</span>
+    <h1 class="place-title">Peru</h1>
+  </header>
+
+  <main id="main" class="page">
+    <!-- Stage wraps image + overlay cards for wide view -->
+    <div class="stage">
+      <figure class="hero">
+        <img
+          src="images/peru-800.webp"
+          srcset="
+            images/peru-400.webp 400w,
+            images/peru-800.webp 800w,
+            images/peru-1200.webp 1200w
+          "
+          sizes="(max-width: 700px) 100vw, 1100px"
+          alt="Landscape view representing Peru"
+          loading="lazy"
+          width="1100"
+          height="620">
+      </figure>
+
+      <!-- Data Card -->
+      <section class="card data-card" aria-labelledby="data-title">
+        <h2 id="data-title">Data</h2>
+        <dl class="kv">
+          <dt>Area</dt><dd>1,285,216 km²</dd>
+          <dt>Population</dt><dd>~34,000,000</dd>
+          <dt>Capital</dt><dd>Lima</dd>
+          <dt>Languages</dt><dd>Spanish, Quechua</dd>
+          <dt>Currency</dt><dd>Peruvian Sol (PEN)</dd>
+          <dt>Time Zone</dt><dd>PET (UTC-5)</dd>
+          <dt>Calling Code</dt><dd>+51</dd>
+          <dt>Internet TLD</dt><dd>.pe</dd>
+        </dl>
+      </section>
+
+      <!-- Weather Card -->
+      <section class="card weather-card" aria-labelledby="weather-title">
+        <h2 id="weather-title">Weather</h2>
+
+        <div class="weather-top">
+          <img
+            id="weather-icon"
+            src="images/weather-partly.svg"
+            alt="Weather icon"
+            width="52"
+            height="52">
+        </div>
+
+        <dl class="kv">
+          <dt>Temperature</dt><dd><span id="temp">52</span>°F</dd>
+          <dt>Conditions</dt><dd><span id="cond">Partly Cloudy</span></dd>
+          <dt>Wind</dt><dd><span id="wind">12</span> mph</dd>
+          <dt>Wind Chill</dt><dd><span id="chill">N/A</span></dd>
+        </dl>
+      </section>
+    </div>
+
+    <!-- Optional short “about” (kept small so it doesn’t break the example look) -->
+    <section class="about">
+      <h2>About</h2>
+      <p>
+        This place page highlights Peru, my home country. I am Armando Rebaza, born in Arequipa, Peru.
+        My family values faith, education, and service, and I am building my web development skills in WDD 131.
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; <span id="currentyear"></span> Armando Rebaza | Peru</p>
+    <p>Last Modified: <span id="lastmodified"></span></p>
+  </footer>
+</body>
+</html>

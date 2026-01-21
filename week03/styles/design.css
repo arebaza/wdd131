@@ -1,0 +1,75 @@
+/* design.css
+   Demonstrates web design principles:
+   - Contrast
+   - Alignment
+   - Proximity
+   - Repetition
+   - Visual hierarchy
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background: #f4f6fb;
+  color: #1b1b1f;
+  line-height: 1.5;
+}
+
+/* Header demonstrates contrast + hierarchy */
+.site-header {
+  background: #2a0d4d;
+  color: #ffffff;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.subtitle {
+  margin: 0.25rem 0 0;
+  color: #dcd7e6;
+}
+
+/* Main container shows alignment + proximity */
+.main-container {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Cards demonstrate repetition */
+.card {
+  background: #ffffff;
+  padding: 1.25rem;
+  border-radius: 12px;
+  border: 1px solid #d6d9f0;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+  margin-top: 0;
+  color: #2a0d4d;
+}
+
+/* Footer */
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem;
+  background: #2a0d4d;
+  color: #ffffff;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}

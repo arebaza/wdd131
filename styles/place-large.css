@@ -1,0 +1,49 @@
+/* place-large.css
+   Wide view: overlay "Data" left and "Weather" right over the image,
+   similar to the provided example.
+*/
+
+@media (min-width: 900px) {
+  .stage {
+    position: relative;
+    padding-bottom: 0; /* remove extra red padding in wide view */
+  }
+
+  .hero img {
+    height: 560px;         /* creates the wide hero look */
+    object-fit: cover;     /* prevents stretching */
+  }
+
+  /* Turn cards into overlays */
+  .data-card,
+  .weather-card {
+    position: absolute;
+    top: 110px;
+    max-width: 320px;
+    margin: 0;
+    background: rgba(255,255,255,0.88); /* translucent like the example */
+    backdrop-filter: blur(2px);
+  }
+
+  .data-card {
+    left: 18px;
+  }
+
+  .weather-card {
+    right: 18px;
+  }
+
+  /* Reduce spacing so it looks like the sample */
+  .card h2 {
+    margin-bottom: 0.5rem;
+  }
+
+  .kv dt,
+  .kv dd {
+    font-size: 0.9rem;
+  }
+
+  .about {
+    margin-top: 1.25rem;
+  }
+}

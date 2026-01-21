@@ -1,0 +1,159 @@
+/* place.css
+   Mobile-first layout matching the provided wireframe style:
+   Title bar -> Image -> Data -> Weather -> Footer
+*/
+
+:root {
+  --bg: #eaf5ea;      /* light green like the sample page background */
+  --red: #b30022;     /* red header/footer like the example */
+  --text: #1b1b1f;
+  --muted: #52545f;
+  --card: #ffffff;
+  --border: #d9dde6;
+  --shadow: 0 8px 22px rgba(0,0,0,0.12);
+  --radius: 12px;
+  --max: 1100px;
+}
+
+*,
+*::before,
+*::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Roboto", Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: #000;
+  color: #fff;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  z-index: 999;
+}
+.skip-link:focus {
+  left: 0.75rem;
+  top: 0.75rem;
+}
+
+/* Header */
+.site-header {
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+#course-title {
+  display: inline-block;
+  font-weight: 700;
+  margin-bottom: 0.4rem;
+}
+
+.place-title {
+  margin: 0;
+  font-size: 2rem;
+  letter-spacing: 0.4px;
+}
+
+/* Page container */
+.page {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 1rem 1.25rem;
+}
+
+/* Stage holds image + cards */
+.stage {
+  background: var(--red);
+  padding-bottom: 1rem; /* gives a red frame like the example */
+}
+
+/* Hero image */
+.hero {
+  margin: 0;
+  border-top: 6px solid #0a6b3f; /* thin green line like sample */
+}
+
+.hero img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+/* Cards */
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  margin: 1rem auto 0;
+  padding: 1rem;
+  max-width: 520px; /* keeps cards narrow like the mobile sample */
+}
+
+.card h2 {
+  margin: 0 0 0.75rem;
+  text-align: center;
+}
+
+/* Key/Value list */
+.kv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.4rem 0.75rem;
+  margin: 0;
+}
+
+.kv dt {
+  font-weight: 700;
+  font-size: 0.92rem;
+}
+
+.kv dd {
+  margin: 0;
+  text-align: right;
+  color: var(--muted);
+  font-size: 0.92rem;
+}
+
+/* Weather icon row */
+.weather-top {
+  display: flex;
+  justify-content: center;
+  margin: 0.25rem 0 0.75rem;
+}
+
+/* About section (below the framed stage) */
+.about {
+  margin: 1rem auto 0;
+  max-width: 900px;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  box-shadow: var(--shadow);
+}
+
+.about h2 {
+  margin-top: 0;
+}
+
+/* Footer */
+.site-footer {
+  background: var(--red);
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+}
+
+.site-footer p {
+  margin: 0.25rem 0;
+}

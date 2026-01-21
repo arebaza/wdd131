@@ -1,0 +1,14 @@
+/* place-large.css
+   Larger-screen enhancement. Mobile view still matches the wireframe.
+*/
+
+@media (min-width: 900px){
+  .page{
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+
+  .hero{
+    grid-column: 1 / -1;
+  }
+}
