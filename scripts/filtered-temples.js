@@ -160,7 +160,7 @@ const temples =
   dedicated: "1877, April, 6",
   area: 110000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/st.-george-utah-temple/st.-george-utah-temple-40449.jpg"
 },
 {
   templeName: "Logan Utah Temple",
@@ -168,7 +168,7 @@ const temples =
   dedicated: "1884, May, 17",
   area: 119619,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/logan-utah-temple/logan-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/logan-utah-temple/logan-utah-temple-63979.jpg"
 },
 {
   templeName: "Manti Utah Temple",
@@ -176,15 +176,7 @@ const temples =
   dedicated: "1888, May, 21",
   area: 74792,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-371.jpg"
-},
-{
-  templeName: "Salt Lake Temple",
-  location: "50 N West Temple, Salt Lake City, Utah, United States",
-  dedicated: "1893, April, 6",
-  area: 382207,
-  status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/manti-utah-temple/manti-utah-temple-45008.jpg"
 },
 {
   templeName: "Ogden Utah Temple",
@@ -192,15 +184,7 @@ const temples =
   dedicated: "1972, January, 18",
   area: 115000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/ogden-utah-temple/ogden-utah-temple-371.jpg"
-},
-{
-  templeName: "Provo Utah Rock Canyon Temple",
-  location: "2200 Temple Hill Dr, Provo, Utah, United States",
-  dedicated: "1972, February, 9",
-  area: 128000,
-  status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/provo-utah-temple/provo-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/ogden-utah-temple/ogden-utah-temple-4173.jpg"
 },
 {
   templeName: "Jordan River Utah Temple",
@@ -208,7 +192,7 @@ const temples =
   dedicated: "1981, November, 16",
   area: 148236,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/jordan-river-utah-temple/jordan-river-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/jordan-river-utah-temple/jordan-river-utah-temple-51608-main.jpg"
 },
 {
   templeName: "Bountiful Utah Temple",
@@ -216,7 +200,7 @@ const temples =
   dedicated: "1995, January, 8",
   area: 104000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/bountiful-utah-temple/bountiful-utah-temple-40955-main.jpg"
 },
 {
   templeName: "Mount Timpanogos Utah Temple",
@@ -224,7 +208,7 @@ const temples =
   dedicated: "1996, October, 13",
   area: 107240,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mount-timpanogos-utah-temple/mount-timpanogos-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/mount-timpanogos-utah-temple/mount-timpanogos-utah-temple-60335.jpg"
 },
 {
   templeName: "Draper Utah Temple",
@@ -232,7 +216,7 @@ const temples =
   dedicated: "2009, March, 20",
   area: 58300,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/draper-utah-temple/draper-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/draper-utah-temple/draper-utah-temple-38937-main.jpg"
 },
 {
   templeName: "Oquirrh Mountain Utah Temple",
@@ -240,7 +224,7 @@ const temples =
   dedicated: "2009, August, 21",
   area: 190000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/oquirrh-mountain-utah-temple/oquirrh-mountain-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/oquirrh-mountain-utah-temple/oquirrh-mountain-utah-temple-4042.jpg"
 },
 {
   templeName: "Brigham City Utah Temple",
@@ -248,7 +232,7 @@ const temples =
   dedicated: "2012, September, 23",
   area: 36000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/brigham-city-utah-temple/brigham-city-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/brigham-city-utah-temple/brigham-city-utah-temple-3905.jpg"
 },
 {
   templeName: "Payson Utah Temple",
@@ -256,7 +240,7 @@ const temples =
   dedicated: "2015, June, 7",
   area: 96630,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/payson-utah-temple/payson-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/payson-utah-temple/payson-utah-temple-11087.jpg"
 },
 {
   templeName: "Provo City Center Temple",
@@ -264,7 +248,7 @@ const temples =
   dedicated: "2016, March, 20",
   area: 85084,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/provo-city-center-temple/provo-city-center-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/provo-city-center-temple/provo-city-center-temple-3390.jpg"
 },
 {
   templeName: "Cedar City Utah Temple",
@@ -272,7 +256,7 @@ const temples =
   dedicated: "2017, December, 10",
   area: 42657,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/cedar-city-utah-temple/cedar-city-utah-temple-371.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/cedar-city-utah-temple/cedar-city-utah-temple-47.jpg"
 },
 {
   templeName: "Orem Utah Temple",
@@ -288,7 +272,7 @@ const temples =
   dedicated: "2024, June, 2",
   area: 70000,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/taylorsville-utah-temple/taylorsville-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/taylorsville-utah-temple/taylorsville-utah-temple-46901.jpg"
 },
 {
   templeName: "Layton Utah Temple",
@@ -296,7 +280,26 @@ const temples =
   dedicated: "2024, June, 16",
   area: 87400,
   status: "Operating",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/layton-utah-temple/layton-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/layton-utah-temple/layton-utah-temple-47166.jpg"
+},
+// Utah Temples Under Renovation
+
+{
+  templeName: "Salt Lake Temple",
+  location: "50 N West Temple, Salt Lake City, Utah, United States",
+  dedicated: "1893, April, 6",
+  area: 382207,
+  status: "Under Renovation",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/salt-lake-temple/salt-lake-temple-67751.jpg"
+},
+
+{
+  templeName: "Provo Utah Rock Canyon Temple",
+  location: "Provo, Utah, United States",
+  dedicated: "TBD",
+  area: 0, // TBD until design details are released
+  status: "Under Renovation",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/provo-utah-rock-canyon-temple/provo-utah-rock-canyon-temple-67686.jpg"
 },
 // Utah Temple Under construction
 {
@@ -305,7 +308,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Under Construction",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/ephraim-utah-temple/ephraim-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/ephraim-utah-temple/ephraim-utah-temple-67427.jpg"
 },
 {
   templeName: "Smithfield Utah Temple",
@@ -313,7 +316,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Under Construction",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/smithfield-utah-temple/smithfield-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/smithfield-utah-temple/smithfield-utah-temple-67947.jpg"
 },
 {
   templeName: "Heber Valley Utah Temple",
@@ -321,7 +324,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Under Construction",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/heber-valley-utah-temple/heber-valley-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/heber-valley-utah-temple/heber-valley-utah-temple-64260.jpg"
 },
 // Utah Temple Announced
 {
@@ -330,7 +333,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Announced",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/west-jordan-utah-temple/west-jordan-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/west-jordan-utah-temple/west-jordan-utah-temple-61564.jpg"
 },
 {
   templeName: "Lehi Utah Temple",
@@ -338,7 +341,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Announced",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lehi-utah-temple/lehi-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lehi-utah-temple/lehi-utah-temple-67995.jpg"
 },
 {
   templeName: "Spanish Fork Utah Temple",
@@ -346,7 +349,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Announced",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/spanish-fork-utah-temple/spanish-fork-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/spanish-fork-utah-temple/spanish-fork-utah-temple-66739-thumb.jpg"
 },  
 {
   templeName: "Price Utah Temple",
@@ -354,7 +357,7 @@ const temples =
   dedicated: "TBD",
   area: 10000,
   status: "Announced",
-  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/price-utah-temple/price-utah-temple-main.jpg"
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/price-utah-temple/price-utah-temple-53843-thumb.jpg"
 },
  
 ];
