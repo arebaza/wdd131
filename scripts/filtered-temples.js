@@ -6,7 +6,8 @@
   Under Construction, or Announced—while still meeting the required filters for the assignment.
 */
 
-const temples = [
+const temples = 
+[
   // PERU
  {
     templeName: "Lima Perú Temple",
@@ -297,6 +298,65 @@ const temples = [
   status: "Operating",
   imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/layton-utah-temple/layton-utah-temple-main.jpg"
 },
+// Utah Temple Under construction
+{
+  templeName: "Ephraim Utah Temple",
+  location: "Ephraim, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Under Construction",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/ephraim-utah-temple/ephraim-utah-temple-main.jpg"
+},
+{
+  templeName: "Smithfield Utah Temple",
+  location: "Smithfield, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Under Construction",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/smithfield-utah-temple/smithfield-utah-temple-main.jpg"
+},
+{
+  templeName: "Heber Valley Utah Temple",
+  location: "Heber City, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Under Construction",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/heber-valley-utah-temple/heber-valley-utah-temple-main.jpg"
+},
+// Utah Temple Announced
+{
+  templeName: "West Jordan Utah Temple",
+  location: "West Jordan, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Announced",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/west-jordan-utah-temple/west-jordan-utah-temple-main.jpg"
+},
+{
+  templeName: "Lehi Utah Temple",
+  location: "Lehi, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Announced",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/lehi-utah-temple/lehi-utah-temple-main.jpg"
+},
+{
+  templeName: "Spanish Fork Utah Temple",
+  location: "Spanish Fork, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Announced",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/spanish-fork-utah-temple/spanish-fork-utah-temple-main.jpg"
+},  
+{
+  templeName: "Price Utah Temple",
+  location: "Price, Utah, United States",
+  dedicated: "TBD",
+  area: 10000,
+  status: "Announced",
+  imageUrl: "https://churchofjesuschristtemples.org/assets/img/temples/price-utah-temple/price-utah-temple-main.jpg"
+},
+ 
 ];
 
 // ---------- helpers ----------
