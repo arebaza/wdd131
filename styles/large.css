@@ -1,0 +1,26 @@
+@media only screen and (min-width: 40rem) {
+  #menu {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    flex-direction: row;
+    width: auto;
+    gap: 0.5rem;
+  }
+
+  .nav-links a {
+    border: none;
+  }
+
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media only screen and (min-width: 64rem) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
