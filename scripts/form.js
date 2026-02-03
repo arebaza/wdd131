@@ -1,6 +1,6 @@
 "use strict";
 
-/* PROYECTO W05: llenar el select con un arreglo de productos */
+/* PROYECTO W05: cargar productos dinámicamente */
 
 const productos = [
   { id: "fc-1888", name: "flux capacitor" },
