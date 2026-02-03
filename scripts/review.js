@@ -1,6 +1,9 @@
 "use strict";
 
-/* PROYECTO W05: contador de reseñas con localStorage */
+/* ==========================================================
+   W05 - Página de Confirmación
+   Objetivo: usar localStorage para contar reseñas completadas
+   ========================================================== */
 
 const claveContador = "contadorResenas";
 const countSpan = document.querySelector("#reviewCount");
@@ -19,19 +22,32 @@ function guardarContador(valor) {
 function incrementarContador() {
   const nuevo = obtenerContador() + 1;
   guardarContador(nuevo);
-  countSpan.textContent = nuevo;
+  if (countSpan) countSpan.textContent = String(nuevo);
 }
 
 function renderSummary() {
+  if (!summaryList) return;
+
   const params = new URLSearchParams(window.location.search);
 
-  [
-    `Product: ${params.get("productName")}`,
-    `Rating: ${params.get("rating")}`,
-    `Install Date: ${params.get("installDate")}`,
-    `Features: ${params.getAll("features").join(", ") || "None"}`,
-    `Name: ${params.get("userName") || "Anonymous"}`
-  ].forEach(text => {
+  const product = params.get("productName") || "—";
+  const rating = params.get("rating") || "—";
+  const installDate = params.get("installDate") || "—";
+  const name = params.get("userName") || "Anonymous";
+  const review = params.get("writtenReview") || "No written review provided.";
+  const features = params.getAll("features");
+  const featuresText = features.length ? features.join(", ") : "None selected";
+
+  const items = [
+    `Product (submitted value): ${product}`,
+    `Rating: ${rating}`,
+    `Installation Date: ${installDate}`,
+    `Useful Features: ${featuresText}`,
+    `Name: ${name}`,
+    `Review: ${review}`
+  ];
+
+  items.forEach((text) => {
     const li = document.createElement("li");
     li.textContent = text;
     summaryList.append(li);

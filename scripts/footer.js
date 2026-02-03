@@ -1,6 +1,9 @@
 "use strict";
 
-/* Script del footer (sin JS inline, cumple audit) */
+/* Script del footer separado (sin JS inline, cumple audit tool) */
 
-document.getElementById("year").textContent = new Date().getFullYear();
-document.getElementById("lastModified").textContent = document.lastModified;
+const yearSpan = document.querySelector("#year");
+const modSpan = document.querySelector("#lastModified");
+
+if (yearSpan) yearSpan.textContent = String(new Date().getFullYear());
+if (modSpan) modSpan.textContent = document.lastModified;

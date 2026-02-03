@@ -4,11 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="WDD 131 Week 05 Product Review Form where users select a product, rate it, add an installation date, and submit feedback.">
+        content="WDD 131 Week 05 Product Review Form where users select a product, provide a rating, choose an installation date, and submit feedback.">
   <meta name="author" content="Armando Rebaza">
   <title>Product Review Form</title>
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts (no @import) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
@@ -25,85 +25,118 @@
         <h1>Product Review</h1>
         <p class="tagline">Share your experience to help others.</p>
       </div>
-
-      <!-- ✅ FIX: aria-label REMOVED (valid HTML) -->
+      <!-- ✅ Nu checker fix: no aria-label on generic div -->
       <div class="badge">W05</div>
     </div>
   </header>
 
   <main class="wrap">
-    <section class="card">
-      <h2 class="card-title">Review Form</h2>
+    <section class="card" aria-labelledby="formTitle">
+      <h2 id="formTitle" class="card-title">Review Form</h2>
 
-      <form method="get" action="review.html">
+      <form id="reviewForm" method="get" action="review.html">
         <!-- Product Name -->
         <div class="field">
           <label for="productName">
-            Product Name <span class="req">*</span>
+            Product Name <span class="req" aria-hidden="true">*</span>
           </label>
-          <select id="productName" name="productName" required>
+          <select id="productName" name="productName" required aria-describedby="productHelp">
             <option value="" disabled selected>Select a Product ...</option>
+            <!-- JS inserts options -->
           </select>
+          <p id="productHelp" class="hint">Required. Choose the product you reviewed.</p>
         </div>
 
-        <!-- Rating -->
+        <!-- Overall Rating -->
         <fieldset class="field">
-          <legend>Overall Rating <span class="req">*</span></legend>
+          <legend>Overall Rating <span class="req" aria-hidden="true">*</span></legend>
 
-          <input type="radio" id="r1" name="rating" value="1" required>
-          <label for="r1">1</label>
+          <div class="rating" role="radiogroup" aria-label="Overall rating from 1 to 5">
+            <div class="rate-item">
+              <input type="radio" id="r1" name="rating" value="1" required>
+              <label for="r1" title="1 out of 5">1</label>
+            </div>
 
-          <input type="radio" id="r2" name="rating" value="2" required>
-          <label for="r2">2</label>
+            <div class="rate-item">
+              <input type="radio" id="r2" name="rating" value="2" required>
+              <label for="r2" title="2 out of 5">2</label>
+            </div>
 
-          <input type="radio" id="r3" name="rating" value="3" required>
-          <label for="r3">3</label>
+            <div class="rate-item">
+              <input type="radio" id="r3" name="rating" value="3" required>
+              <label for="r3" title="3 out of 5">3</label>
+            </div>
 
-          <input type="radio" id="r4" name="rating" value="4" required>
-          <label for="r4">4</label>
+            <div class="rate-item">
+              <input type="radio" id="r4" name="rating" value="4" required>
+              <label for="r4" title="4 out of 5">4</label>
+            </div>
 
-          <input type="radio" id="r5" name="rating" value="5" required>
-          <label for="r5">5</label>
+            <div class="rate-item">
+              <input type="radio" id="r5" name="rating" value="5" required>
+              <label for="r5" title="5 out of 5">5</label>
+            </div>
+          </div>
+
+          <p class="hint">Required. Select a rating from 1 to 5.</p>
         </fieldset>
 
-        <!-- Date -->
+        <!-- Date of Installation -->
         <div class="field">
           <label for="installDate">
-            Date of Installation <span class="req">*</span>
+            Date of Installation <span class="req" aria-hidden="true">*</span>
           </label>
           <input type="date" id="installDate" name="installDate" required>
+          <p class="hint">Required. Future dates are not allowed.</p>
         </div>
 
-        <!-- Features -->
+        <!-- Useful Features -->
         <fieldset class="field">
-          <legend>Useful Features</legend>
+          <legend>Useful Features <span class="sub">(check all that apply)</span></legend>
 
-          <input type="checkbox" id="durability" name="features" value="Durability">
-          <label for="durability">Durability</label>
+          <div class="checks">
+            <div class="check">
+              <input type="checkbox" id="durability" name="features" value="Durability">
+              <label for="durability">Durability</label>
+            </div>
 
-          <input type="checkbox" id="ease" name="features" value="Ease of Use">
-          <label for="ease">Ease of Use</label>
+            <div class="check">
+              <input type="checkbox" id="ease" name="features" value="Ease of Use">
+              <label for="ease">Ease of Use</label>
+            </div>
 
-          <input type="checkbox" id="performance" name="features" value="Performance">
-          <label for="performance">Performance</label>
+            <div class="check">
+              <input type="checkbox" id="performance" name="features" value="Performance">
+              <label for="performance">Performance</label>
+            </div>
 
-          <input type="checkbox" id="design" name="features" value="Design">
-          <label for="design">Design</label>
+            <div class="check">
+              <input type="checkbox" id="design" name="features" value="Design">
+              <label for="design">Design</label>
+            </div>
+          </div>
         </fieldset>
 
-        <!-- Review -->
+        <!-- Written Review -->
         <div class="field">
-          <label for="writtenReview">Written Review</label>
-          <textarea id="writtenReview" name="writtenReview"></textarea>
+          <label for="writtenReview">Written Review <span class="sub">(optional)</span></label>
+          <textarea id="writtenReview" name="writtenReview" rows="5"
+            placeholder="Write your comments here..."></textarea>
         </div>
 
-        <!-- Name -->
+        <!-- User Name -->
         <div class="field">
-          <label for="userName">Your Name</label>
-          <input type="text" id="userName" name="userName">
+          <label for="userName">Your Name <span class="sub">(optional)</span></label>
+          <input type="text" id="userName" name="userName" autocomplete="name" placeholder="e.g., Armando">
         </div>
 
-        <input class="btn" type="submit" value="Post Review">
+        <div class="actions">
+          <input class="btn" type="submit" value="Post Review">
+        </div>
+
+        <p class="small-note">
+          <span class="req" aria-hidden="true">*</span> Required fields
+        </p>
       </form>
     </section>
   </main>
