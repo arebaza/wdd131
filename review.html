@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Product review confirmation page">
+  <meta name="author" content="Armando Rebaza">
+  <title>Review Submitted</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/review.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1>Thank You!</h1>
+        <p class="tagline">Your review has been submitted successfully.</p>
+      </div>
+      <div class="badge" aria-label="Confirmation page">✔</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card">
+      <h2 class="card-title">Submission Confirmation</h2>
+
+      <p class="confirm">
+        ✅ Review received. Total reviews completed on this browser:
+        <strong><span id="reviewCount">0</span></strong>
+      </p>
+
+      <div class="summary" aria-label="Review summary">
+        <h3>Summary</h3>
+        <ul id="reviewSummary">
+          <!-- JS will populate this list from URLSearchParams -->
+        </ul>
+      </div>
+
+      <p class="actions">
+        <a class="btn link-btn" href="form.html">Submit Another Review</a>
+      </p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>

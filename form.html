@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="WDD 131 Week 05 Product Review Form">
+  <meta name="author" content="Armando Rebaza">
+  <title>Product Review Form</title>
+
+  <!-- Google Fonts (no @import) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/form.css">
+  <script src="scripts/form.js" defer></script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1>Product Review</h1>
+        <p class="tagline">Tell us how it went—your feedback helps others.</p>
+      </div>
+      <div class="badge" aria-label="Week 05 Assignment">W05</div>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <section class="card" aria-labelledby="formTitle">
+      <h2 id="formTitle" class="card-title">Review Form</h2>
+
+      <!-- REQUERIDO por la tarea: method="get" y action="review.html" :contentReference[oaicite:1]{index=1} -->
+      <form id="reviewForm" method="get" action="review.html">
+        <!-- Product Name (required select + placeholder disabled/selected) :contentReference[oaicite:2]{index=2} -->
+        <div class="field">
+          <label for="productName">
+            Product Name <span class="req" aria-hidden="true">*</span>
+          </label>
+          <select id="productName" name="productName" required aria-describedby="productHelp">
+            <option value="" disabled selected>Select a Product ...</option>
+            <!-- JS inserts remaining options -->
+          </select>
+          <p id="productHelp" class="hint">Required. Choose the product you reviewed.</p>
+        </div>
+
+        <!-- Overall Rating (5 radios 1..5, same name, required) :contentReference[oaicite:3]{index=3} -->
+        <fieldset class="field">
+          <legend>
+            Overall Rating <span class="req" aria-hidden="true">*</span>
+          </legend>
+
+          <div class="rating" role="radiogroup" aria-label="Overall rating from 1 to 5">
+            <div class="rate-item">
+              <input type="radio" id="r1" name="rating" value="1" required>
+              <label for="r1" title="1 out of 5"><span aria-hidden="true">☆</span><span class="sr-only">1</span></label>
+            </div>
+            <div class="rate-item">
+              <input type="radio" id="r2" name="rating" value="2">
+              <label for="r2" title="2 out of 5"><span aria-hidden="true">☆☆</span><span class="sr-only">2</span></label>
+            </div>
+            <div class="rate-item">
+              <input type="radio" id="r3" name="rating" value="3">
+              <label for="r3" title="3 out of 5"><span aria-hidden="true">☆☆☆</span><span class="sr-only">3</span></label>
+            </div>
+            <div class="rate-item">
+              <input type="radio" id="r4" name="rating" value="4">
+              <label for="r4" title="4 out of 5"><span aria-hidden="true">☆☆☆☆</span><span class="sr-only">4</span></label>
+            </div>
+            <div class="rate-item">
+              <input type="radio" id="r5" name="rating" value="5">
+              <label for="r5" title="5 out of 5"><span aria-hidden="true">☆☆☆☆☆</span><span class="sr-only">5</span></label>
+            </div>
+          </div>
+
+          <p class="hint">Required. Select 1–5 stars.</p>
+        </fieldset>
+
+        <!-- Date of Installation (required date) :contentReference[oaicite:4]{index=4} -->
+        <div class="field">
+          <label for="installDate">
+            Date of Installation <span class="req" aria-hidden="true">*</span>
+          </label>
+          <input type="date" id="installDate" name="installDate" required>
+          <p class="hint">Required. Choose the date the product was installed.</p>
+        </div>
+
+        <!-- Useful Features (checkboxes: id, name, value) :contentReference[oaicite:5]{index=5} -->
+        <fieldset class="field">
+          <legend>Useful Features <span class="sub">(check all that apply)</span></legend>
+          <div class="checks">
+            <div class="check">
+              <input type="checkbox" id="durability" name="features" value="Durability">
+              <label for="durability">Durability</label>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="ease" name="features" value="Ease of Use">
+              <label for="ease">Ease of Use</label>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="performance" name="features" value="Performance">
+              <label for="performance">Performance</label>
+            </div>
+            <div class="check">
+              <input type="checkbox" id="design" name="features" value="Design">
+              <label for="design">Design</label>
+            </div>
+          </div>
+        </fieldset>
+
+        <!-- Written Review (textarea, optional) :contentReference[oaicite:6]{index=6} -->
+        <div class="field">
+          <label for="writtenReview">Written Review <span class="sub">(optional)</span></label>
+          <textarea id="writtenReview" name="writtenReview" rows="5"
+            placeholder="Write your comments here..."></textarea>
+        </div>
+
+        <!-- User Name (text, optional) :contentReference[oaicite:7]{index=7} -->
+        <div class="field">
+          <label for="userName">Your Name <span class="sub">(optional)</span></label>
+          <input type="text" id="userName" name="userName" autocomplete="name" placeholder="e.g., Armando">
+        </div>
+
+        <!-- Submit button (required input type submit) :contentReference[oaicite:8]{index=8} -->
+        <div class="actions">
+          <input class="btn" type="submit" value="Post Review">
+        </div>
+
+        <p class="small-note">
+          <span class="req" aria-hidden="true">*</span> Required fields
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+    document.getElementById("lastModified").textContent = document.lastModified;
+  </script>
+</body>
+</html>
