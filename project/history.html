@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Peru history timeline you can explore by selecting a year range with dynamic JavaScript rendering.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru Travel Guide | History</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/app.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1 class="title-flag">
+        <span>History by Year Range</span>
+        <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        </h1>
+        <p class="tagline">Select a time period to explore.</p>
+      </div>
+      <div class="badge">Time</div>
+    </div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="wrap nav-grid">
+        <a class="nav-brand" href="index.html">Home</a>
+        <div class="nav-links">
+          <a href="places.html">Places</a>
+          <a href="food.html">Food</a>
+          <a class="active" href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="card">
+      <h2 class="card-title">Choose a range</h2>
+      <label for="rangoHistoria" class="label">Year Range</label>
+      <select id="rangoHistoria" name="rangoHistoria">
+        <option value="" selected>Select a range...</option>
+        <option value="1200-1532">1200–1532 (Inca Expansion)</option>
+        <option value="1532-1821">1532–1821 (Colonial Period)</option>
+        <option value="1821-1900">1821–1900 (Early Republic)</option>
+        <option value="1900-2000">1900–2000 (Modernization)</option>
+        <option value="2000-present">2000–Present (Contemporary Peru)</option>
+      </select>
+
+      <p id="mensajeHistoria" class="muted" aria-live="polite">
+        Select a range to display the timeline.
+      </p>
+
+      <div id="contenedorHistoria" class="stack" aria-live="polite">
+        <!-- JS renders history cards here -->
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>
