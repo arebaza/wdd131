@@ -1,0 +1,113 @@
+/* =========================================================
+   W05 Website Planning Document (external CSS required)
+   ========================================================= */
+
+:root {
+  --bg: #0f172a;
+  --surface: #111c33;
+  --text: #f8fafc;
+  --muted: #cbd5e1;
+  --accent: #f59e0b;
+  --peru-red: #d91023;
+  --border: rgba(255,255,255,0.2);
+  --radius: 12px;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: "Open Sans", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+}
+
+.wrap {
+  width: min(900px, 92%);
+  margin: 0 auto;
+}
+
+header {
+  padding: 1.5rem 0;
+  border-bottom: 1px solid var(--border);
+  background: linear-gradient(180deg, #111c33, #0b1220);
+}
+
+h1, h2, h3 {
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 0.3px;
+}
+
+.title-flag {
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 2rem;
+}
+
+.flag {
+  width: 36px;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+  background: #fff;
+}
+
+main {
+  padding: 1.5rem 0 2.5rem;
+}
+
+section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  margin: 1rem 0 1.5rem;
+}
+
+.muted { color: var(--muted); }
+
+.small { font-size: 0.9rem; color: var(--muted); }
+
+ul { padding-left: 1.2rem; }
+
+.colors {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.color-box {
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  text-align: center;
+  font-weight: 800;
+}
+
+.bg-color { background: #0f172a; }
+.surface-color { background: #111c33; }
+.accent-color { background: #f59e0b; color: #0b1220; }
+.red-color { background: #d91023; }
+
+.wireframe {
+  border: 1px dashed var(--border);
+  border-radius: var(--radius);
+  padding: 1rem;
+  margin-top: 0.75rem;
+  background: rgba(255,255,255,0.04);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  color: var(--muted);
+  white-space: pre;
+  overflow-x: auto;
+}
+
+footer {
+  border-top: 1px solid var(--border);
+  padding: 1rem 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}

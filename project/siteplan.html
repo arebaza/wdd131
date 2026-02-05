@@ -2,174 +2,55 @@
 <html lang="en-US">
 <head>
   <meta charset="utf-8">
-  <title>Peru Travel Guide – Website Planning Document</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Website planning document for the Peru Travel Guide project, including purpose, scenarios, color schema, typography, and wireframes.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru Travel Guide – Website Planning Document</title>
 
-  <!-- Fonts chosen for the project -->
+  <!-- Fonts chosen for the project (allowed, with preconnects) -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
 
-  <style>
-    /* =========================================
-       Basic styling for the site plan document
-       Uses the same color schema and typography
-       as the final Peru Travel Guide project
-       ========================================= */
-
-    :root {
-      --bg: #0f172a;
-      --surface: #111c33;
-      --text: #f8fafc;
-      --muted: #cbd5e1;
-      --accent: #f59e0b;
-      --peru-red: #d91023;
-      --border: rgba(255,255,255,0.2);
-      --radius: 12px;
-    }
-
-    body {
-      margin: 0;
-      font-family: "Open Sans", -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-    }
-
-    header {
-      padding: 1.5rem 0;
-      border-bottom: 1px solid var(--border);
-      background: linear-gradient(180deg, #111c33, #0b1220);
-    }
-
-    .wrap {
-      width: min(900px, 92%);
-      margin: 0 auto;
-    }
-
-    h1, h2, h3 {
-      font-family: "Montserrat", sans-serif;
-      letter-spacing: 0.3px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: 2rem;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-    }
-
-    .flag {
-      width: 36px;
-      height: auto;
-      border-radius: 6px;
-      border: 1px solid var(--border);
-      background: #fff;
-    }
-
-    main {
-      padding: 1.5rem 0 2.5rem;
-    }
-
-    section {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1.25rem;
-      margin: 1rem 0 1.5rem;
-    }
-
-    .muted {
-      color: var(--muted);
-    }
-
-    ul {
-      padding-left: 1.2rem;
-    }
-
-    .colors {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-      gap: 1rem;
-      margin-top: 0.75rem;
-    }
-
-    .color-box {
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 0.75rem;
-      text-align: center;
-      font-weight: 700;
-    }
-
-    .bg-color { background: #0f172a; }
-    .surface-color { background: #111c33; }
-    .accent-color { background: #f59e0b; color: #0b1220; }
-    .red-color { background: #d91023; }
-
-    .wireframe {
-      border: 1px dashed var(--border);
-      border-radius: var(--radius);
-      padding: 1rem;
-      margin-top: 0.75rem;
-      background: rgba(255,255,255,0.04);
-      font-family: monospace;
-      color: var(--muted);
-      white-space: pre;
-    }
-
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 1rem 0;
-      color: var(--muted);
-      font-size: 0.9rem;
-    }
-  </style>
+  <!-- ✅ Local CSS required by audit -->
+  <link rel="stylesheet" href="styles/siteplan.css">
 </head>
 
 <body>
   <header>
     <div class="wrap">
-      <h1>
+      <h1 class="title-flag">
         <span>Peru Travel Guide — Website Planning Document</span>
-        <img class="flag" src="images/peru-flag.svg" alt="Peru flag">
+        <img class="flag" src="images/peru-flag.svg" alt="Peru flag" loading="lazy">
       </h1>
-      <p class="muted">
-        WDD 131 – Project Site Plan
-      </p>
+      <p class="muted">WDD 131 – W05 Project Site Plan</p>
     </div>
   </header>
 
   <main class="wrap">
 
-    <!-- 1. Site Name -->
     <section>
       <h2>1. Site Name</h2>
       <p><strong>Peru Travel Guide</strong></p>
       <p>
-        This name was chosen because the site focuses on helping visitors discover Peru through
-        its most important attractions: places to visit, traditional food, and historical periods.
-        The name is simple, clear, and easy to remember for travelers who want practical and cultural information.
+        This name was chosen because the website focuses on helping visitors discover Peru through
+        places to visit, traditional food, and a history timeline. The name is simple, clear, and
+        easy to remember for travelers.
       </p>
-      <p class="muted">
-        Optional domain example: perutravelguide.example
-      </p>
+      <p class="muted">Optional domain example: perutravelguide.example</p>
     </section>
 
-    <!-- 2. Site Purpose -->
     <section>
       <h2>2. Site Purpose</h2>
       <p>
-        The purpose of the Peru Travel Guide website is to provide visitors with helpful information
-        about traveling in Peru. The site will present recommended places to visit, famous Peruvian foods,
-        and a simple history timeline that can be explored by year range. It will also include a contact
-        form so users can share their travel interests. The site is designed for students, tourists, and
-        anyone who wants a basic cultural and travel overview of Peru.
+        The purpose of the Peru Travel Guide website is to provide helpful information for visitors
+        who want to travel in Peru. The site presents recommended places to visit, famous Peruvian foods,
+        and a simple history timeline that can be explored by year range. It also includes a contact form
+        so users can share their travel interests and questions.
       </p>
     </section>
 
-    <!-- 3. Scenarios -->
     <section>
       <h2>3. Scenarios</h2>
       <ul>
@@ -180,53 +61,47 @@
       </ul>
     </section>
 
-    <!-- 4. Color Schema -->
     <section>
       <h2>4. Color Schema</h2>
       <p>
         The color schema is inspired by the Peruvian flag (red and white) and balanced with dark blue tones
-        for good contrast and readability.
+        for contrast and readability.
       </p>
 
       <div class="colors">
         <div class="color-box bg-color">
-          Background<br>#0f172a<br>Used for main page background
+          Background<br>#0f172a<br><span class="small">Used for page background</span>
         </div>
+
         <div class="color-box surface-color">
-          Surface / Cards<br>#111c33<br>Used for sections and cards
+          Surface / Cards<br>#111c33<br><span class="small">Used for sections and cards</span>
         </div>
+
         <div class="color-box accent-color">
-          Accent<br>#f59e0b<br>Used for buttons and highlights
+          Accent<br>#f59e0b<br><span class="small">Used for buttons and highlights</span>
         </div>
+
         <div class="color-box red-color">
-          Peru Red<br>#d91023<br>Used for small accents and the flag
+          Peru Red<br>#d91023<br><span class="small">Used for small accents and flag</span>
         </div>
       </div>
     </section>
 
-    <!-- 5. Typography -->
     <section>
       <h2>5. Typography</h2>
-      <p>
-        The site will use two main fonts:
-      </p>
       <ul>
-        <li><strong>Montserrat</strong> – Used for headings and titles to create strong visual hierarchy.</li>
-        <li><strong>Open Sans</strong> – Used for body text, paragraphs, and form content for readability.</li>
+        <li><strong>Montserrat</strong> – Used for headings and titles.</li>
+        <li><strong>Open Sans</strong> – Used for body text for readability.</li>
       </ul>
-      <p>
-        These fonts are clean, modern, and easy to read on both mobile and desktop screens.
-      </p>
     </section>
 
-    <!-- 6. Wireframes -->
     <section>
       <h2>6. Wireframes</h2>
 
       <h3>Mobile View (Home Page)</h3>
       <div class="wireframe">
 [ Header: Site Title + Peru Flag ]
-[ Navigation (stacked or menu) ]
+[ Navigation (stacked) ]
 [ Hero Image ]
 [ Intro Text ]
 [ Featured Cards (1 column) ]
@@ -237,14 +112,13 @@
       <div class="wireframe">
 [ Header: Site Title + Peru Flag ]
 [ Navigation: Home | Places | Food | History | Contact ]
-[ Hero Image | Intro Text Side by Side ]
+[ Hero Image | Intro Text (side by side) ]
 [ Featured Cards (2 columns grid) ]
 [ Footer: Copyright | Last Modified | References ]
       </div>
 
       <p class="muted">
-        These wireframes show the general layout and content relationship for mobile and desktop views.
-        The final site will adapt responsively between these layouts.
+        The final project layout will adjust responsively between these two views.
       </p>
     </section>
 
@@ -252,10 +126,10 @@
 
   <footer>
     <div class="wrap">
-      <p>
-        &copy; 2026 Armando Rebaza — WDD 131 Website Planning Document
-      </p>
+      <p>&copy; <span id="year">2026</span> Armando Rebaza — WDD 131 Website Planning Document</p>
     </div>
   </footer>
+
+  <!-- Optional: You can leave this static for W05. If you want dynamic year, use external JS in W06. -->
 </body>
 </html>
