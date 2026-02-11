@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Peru Travel Guide: discover places to visit, famous foods, and a history timeline you can explore by time period.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru Travel Guide | Home</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/app.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1 class="title-flag">
+         <span>Peru Travel Guide</span>
+         <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        </h1>
+        <p class="tagline">Food, places, and history — planned for real travelers.</p>
+      </div>
+      <div class="badge">W06</div>
+    </div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="wrap nav-grid">
+        <a class="nav-brand" href="index.html">Home</a>
+        <div class="nav-links">
+          <a href="places.html">Places</a>
+          <a href="food.html">Food</a>
+          <a href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="hero">
+      <img class="hero-img" src="images/hero-peru.webp" loading="lazy"
+           alt="Peruvian landscape with mountains and a bright sky.">
+      <div class="hero-content">
+        <h2>Start your Peru adventure</h2>
+        <p>
+          Peru is one of South America’s most diverse countries—coast, Andes, and rainforest.
+          Use this guide to plan places to visit, discover iconic foods, and explore Peru’s timeline.
+        </p>
+        <div class="hero-actions">
+          <a class="btn" href="places.html">Explore Places</a>
+          <a class="btn ghost" href="food.html">Explore Food</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Featured Picks</h2>
+
+      <div class="toolbar">
+        <button class="chip" type="button" data-filter="all">All</button>
+        <button class="chip" type="button" data-filter="places">Places</button>
+        <button class="chip" type="button" data-filter="foods">Foods</button>
+        <p class="muted" id="estadoFavoritos" aria-live="polite"></p>
+      </div>
+
+      <div id="contenedorTarjetas" class="grid" aria-live="polite">
+        <!-- JS renders cards here -->
+      </div>
+
+      <p id="mensajeVacio" class="muted hidden">No results found. Try a different filter.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Quick Tips to Exceed Requirements</h2>
+      <ul class="bullets">
+        <li>Use favorites (localStorage) for places and foods.</li>
+        <li>Use a form with draft-save (localStorage) on the contact page.</li>
+        <li>Use lazy loading on images and keep them optimized.</li>
+        <li>Keep consistent navigation and footer on every page.</li>
+        <li>Use template literals only when generating dynamic output in JavaScript.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>

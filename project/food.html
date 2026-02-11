@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Peruvian food guide with filters and favorites saved to localStorage.">
+  <meta name="description" content="Peruvian food and drink with filters and favorites saved to localStorage.">
   <meta name="author" content="Armando Rebaza">
   <title>Peru Travel Guide | Food</title>
 
@@ -23,22 +23,33 @@
     <div class="wrap header-grid">
       <div>
         <h1 class="title-flag">
-        <span>Food Guide</span>
-        <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+          <span data-i18n="foodsTitle">Peruvian Food</span>
+          <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
         </h1>
-        <p class="tagline">Filter by type and save your favorites.</p>
+        <p class="tagline" data-i18n="foodsTagline">Explore dishes and drinks.</p>
       </div>
-      <div class="badge">Food</div>
+      <div class="badge" data-i18n="badgePeru">Peru</div>
     </div>
 
     <nav class="nav" aria-label="Primary navigation">
       <div class="wrap nav-grid">
-        <a class="nav-brand" href="index.html">Home</a>
+        <a class="nav-brand" href="index.html" data-i18n="navHome">Home</a>
+
         <div class="nav-links">
-          <a href="places.html">Places</a>
-          <a class="active" href="food.html">Food</a>
-          <a href="history.html">History</a>
-          <a href="contact.html">Contact</a>
+          <a href="places.html" data-i18n="navPlaces">Places</a>
+          <a class="active" href="food.html" data-i18n="navFood">Food</a>
+          <a href="history.html" data-i18n="navHistory">History</a>
+          <a href="contact.html" data-i18n="navContact">Contact</a>
+          <a href="references.html" data-i18n="navReferences">References</a>
+        </div>
+
+        <div class="lang">
+          <label for="langSelect" data-i18n="langLabel">Lang</label>
+          <select id="langSelect" name="langSelect">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+          </select>
         </div>
       </div>
     </nav>
@@ -46,28 +57,30 @@
 
   <main id="main" class="wrap">
     <section class="card">
-      <h2 class="card-title">Peruvian Classics</h2>
-      <p class="muted">Try these famous dishes and drinks. Use the filters to explore.</p>
+      <h2 class="card-title" data-i18n="foodsSectionTitle">Top Food & Drinks</h2>
+      <p class="muted" data-i18n="foodsSectionDesc">Filter by type and save favorites.</p>
 
       <div class="toolbar">
-        <button class="chip" type="button" data-tipo="all">All</button>
-        <button class="chip" type="button" data-tipo="main">Main</button>
-        <button class="chip" type="button" data-tipo="street">Street Food</button>
-        <button class="chip" type="button" data-tipo="drink">Drink</button>
-        <button class="chip" type="button" data-tipo="dessert">Dessert</button>
+        <button class="chip" type="button" data-tipo="all" data-i18n="foodFilterAll">All</button>
+        <button class="chip" type="button" data-tipo="main" data-i18n="foodFilterMain">Main</button>
+        <button class="chip" type="button" data-tipo="drink" data-i18n="foodFilterDrink">Drink</button>
         <p class="muted" id="estadoFavoritosFood" aria-live="polite"></p>
       </div>
 
+      <noscript>
+        <p class="muted" data-i18n="jsNeededFood">This page needs JavaScript enabled to show the food list.</p>
+      </noscript>
+
       <div id="contenedorComidas" class="grid" aria-live="polite"></div>
-      <p id="mensajeVacioComidas" class="muted hidden">No foods found for that category.</p>
+      <p id="mensajeVacioComidas" class="muted hidden" data-i18n="foodsEmpty">No food found for that filter.</p>
     </section>
 
     <section class="card">
-      <h2 class="card-title">Food Tips</h2>
+      <h2 class="card-title" data-i18n="foodTipsTitle">Tips</h2>
       <ul class="bullets">
-        <li>Ask if a dish is spicy: “¿Es picante?”</li>
-        <li>Try local drinks: chicha morada, maracuyá juice.</li>
-        <li>For ceviche, lunchtime is common because it’s freshest.</li>
+        <li><strong data-i18n="tipCevicheKey">Ceviche:</strong> <span data-i18n="tipCevicheText"></span></li>
+        <li><strong data-i18n="tipSpiceKey">Spice level:</strong> <span data-i18n="tipSpiceText"></span></li>
+        <li><strong data-i18n="tipDrinksKey">Drinks:</strong> <span data-i18n="tipDrinksText"></span></li>
       </ul>
     </section>
   </main>
@@ -75,8 +88,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <p>&copy; <span id="year"></span> Armando Rebaza</p>
-      <p class="muted">Last Modification: <span id="lastModified"></span></p>
-      <p><a href="references.html">References</a></p>
+      <p class="muted"><span data-i18n="lastMod">Last Modification:</span> <span id="lastModified"></span></p>
+      <p><a href="references.html" data-i18n="navReferences">References</a></p>
     </div>
   </footer>
 </body>

@@ -1,7 +1,7 @@
 "use strict";
 
 /* ==========================================================
-   Contact Form - Draft Save/Restore + i18n-friendly messages
+   Contact Form - Draft Save/Restore
    ========================================================== */
 
 const formContacto = document.querySelector("#formContacto");
@@ -9,39 +9,6 @@ const btnBorrar = document.querySelector("#btnBorrar");
 const estadoForm = document.querySelector("#estadoForm");
 
 const claveBorrador = "borradorContactoPeruW06";
-
-function getIdiomaForm() {
-  const raw = localStorage.getItem("idiomaPeruW06");
-  return (raw === "es" || raw === "fr" || raw === "en") ? raw : "en";
-}
-
-function msg(key) {
-  const lang = getIdiomaForm();
-  const dict = {
-    en: {
-      restored: "Draft restored from localStorage.",
-      saved: "Draft saved.",
-      cleared: "Draft cleared.",
-      required: "Please complete required fields before sending.",
-      sent: "Message sent. Thank you!"
-    },
-    es: {
-      restored: "Borrador restaurado desde localStorage.",
-      saved: "Borrador guardado.",
-      cleared: "Borrador eliminado.",
-      required: "Por favor completa los campos obligatorios antes de enviar.",
-      sent: "Mensaje enviado. ¡Gracias!"
-    },
-    fr: {
-      restored: "Brouillon restauré depuis localStorage.",
-      saved: "Brouillon enregistré.",
-      cleared: "Brouillon effacé.",
-      required: "Veuillez compléter les champs obligatoires avant d’envoyer.",
-      sent: "Message envoyé. Merci !"
-    }
-  };
-  return dict[lang][key] || dict.en[key] || key;
-}
 
 // Load draft data from localStorage
 function cargarBorrador() {
@@ -76,7 +43,7 @@ function cargarBorrador() {
     });
   }
 
-  if (estadoForm) estadoForm.textContent = msg("restored");
+  if (estadoForm) estadoForm.textContent = "Draft restored from localStorage.";
 }
 
 // Save draft data to localStorage
@@ -96,7 +63,7 @@ function guardarBorrador() {
   };
 
   localStorage.setItem(claveBorrador, JSON.stringify(datos));
-  if (estadoForm) estadoForm.textContent = msg("saved");
+  if (estadoForm) estadoForm.textContent = "Draft saved.";
 }
 
 // Clear draft data
@@ -104,19 +71,21 @@ function borrarBorrador() {
   localStorage.removeItem(claveBorrador);
 
   if (formContacto) formContacto.reset();
-  if (estadoForm) estadoForm.textContent = msg("cleared");
+  if (estadoForm) estadoForm.textContent = "Draft cleared.";
 }
 
-function manejarEnvio() {
+// Show a friendly message on submit (still uses GET, but gives UX feedback)
+function manejarEnvio(e) {
+  // Let the browser validate required fields first
   if (!formContacto) return;
 
   if (!formContacto.checkValidity()) {
-    if (estadoForm) estadoForm.textContent = msg("required");
+    if (estadoForm) estadoForm.textContent = "Please complete required fields before sending.";
     return;
   }
 
   localStorage.removeItem(claveBorrador);
-  if (estadoForm) estadoForm.textContent = msg("sent");
+  if (estadoForm) estadoForm.textContent = "Message sent. Thank you!";
 }
 
 // Wire events

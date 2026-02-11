@@ -23,22 +23,33 @@
     <div class="wrap header-grid">
       <div>
         <h1 class="title-flag">
-        <span>Places to Visit</span>
-        <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+          <span data-i18n="placesTitle">Places to Visit</span>
+          <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
         </h1>
-        <p class="tagline">Filter by region and save favorites.</p>
+        <p class="tagline" data-i18n="placesTagline">Filter by region and save favorites.</p>
       </div>
-      <div class="badge">Peru</div>
+      <div class="badge" data-i18n="badgePeru">Peru</div>
     </div>
 
     <nav class="nav" aria-label="Primary navigation">
       <div class="wrap nav-grid">
-        <a class="nav-brand" href="index.html">Home</a>
+        <a class="nav-brand" href="index.html" data-i18n="navHome">Home</a>
+
         <div class="nav-links">
-          <a class="active" href="places.html">Places</a>
-          <a href="food.html">Food</a>
-          <a href="history.html">History</a>
-          <a href="contact.html">Contact</a>
+          <a class="active" href="places.html" data-i18n="navPlaces">Places</a>
+          <a href="food.html" data-i18n="navFood">Food</a>
+          <a href="history.html" data-i18n="navHistory">History</a>
+          <a href="contact.html" data-i18n="navContact">Contact</a>
+          <a href="references.html" data-i18n="navReferences">References</a>
+        </div>
+
+        <div class="lang">
+          <label for="langSelect" data-i18n="langLabel">Lang</label>
+          <select id="langSelect" name="langSelect">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+          </select>
         </div>
       </div>
     </nav>
@@ -46,30 +57,32 @@
 
   <main id="main" class="wrap">
     <section class="card">
-      <h2 class="card-title">Top Places</h2>
-      <p class="muted">
-        Use filters to explore Peru’s three natural regions: Coast (Costa), Highlands (Sierra), and Rainforest (Selva).
-      </p>
+      <h2 class="card-title" data-i18n="placesTop">Top Places</h2>
+      <p class="muted" data-i18n="placesIntro"></p>
 
       <div class="toolbar">
-        <button class="chip" type="button" data-region="all">All Regions</button>
-        <button class="chip" type="button" data-region="costa">Costa</button>
-        <button class="chip" type="button" data-region="sierra">Sierra</button>
-        <button class="chip" type="button" data-region="selva">Selva</button>
+        <button class="chip" type="button" data-region="all" data-i18n="allRegions">All Regions</button>
+        <button class="chip" type="button" data-region="costa" data-i18n="costa">Costa</button>
+        <button class="chip" type="button" data-region="sierra" data-i18n="sierra">Sierra</button>
+        <button class="chip" type="button" data-region="selva" data-i18n="selva">Selva</button>
         <p class="muted" id="estadoFavoritosPlaces" aria-live="polite"></p>
       </div>
 
+      <noscript>
+        <p class="muted" data-i18n="jsNeededPlaces">This page needs JavaScript enabled to show the places list.</p>
+      </noscript>
+
       <div id="contenedorLugares" class="grid" aria-live="polite"></div>
-      <p id="mensajeVacioLugares" class="muted hidden">No places found for that region.</p>
+      <p id="mensajeVacioLugares" class="muted hidden" data-i18n="placesEmpty">No places found for that region.</p>
     </section>
 
     <section class="card">
-      <h2 class="card-title">Travel Planning Notes</h2>
+      <h2 class="card-title" data-i18n="planningNotes">Travel Planning Notes</h2>
       <ul class="bullets">
-        <li><strong>Lima:</strong> Great food, museums, and ocean views.</li>
-        <li><strong>Cusco + Sacred Valley:</strong> High altitude—hydrate and plan acclimation.</li>
-        <li><strong>Arequipa:</strong> A beautiful “white city” with access to Colca Canyon.</li>
-        <li><strong>Machu Picchu:</strong> Book early and pack light.</li>
+        <li><strong data-i18n="noteLimaKey">Lima:</strong> <span data-i18n="noteLimaText"></span></li>
+        <li><strong data-i18n="noteCuscoKey">Cusco + Sacred Valley:</strong> <span data-i18n="noteCuscoText"></span></li>
+        <li><strong data-i18n="noteArequipaKey">Arequipa:</strong> <span data-i18n="noteArequipaText"></span></li>
+        <li><strong data-i18n="noteMachuKey">Machu Picchu:</strong> <span data-i18n="noteMachuText"></span></li>
       </ul>
     </section>
   </main>
@@ -77,8 +90,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <p>&copy; <span id="year"></span> Armando Rebaza</p>
-      <p class="muted">Last Modification: <span id="lastModified"></span></p>
-      <p><a href="references.html">References</a></p>
+      <p class="muted"><span data-i18n="lastMod">Last Modification:</span> <span id="lastModified"></span></p>
+      <p><a href="references.html" data-i18n="navReferences">References</a></p>
     </div>
   </footer>
 </body>

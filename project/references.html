@@ -6,35 +6,93 @@
   <meta name="description" content="References and citations for Peru Travel Guide content and images.">
   <meta name="author" content="Armando Rebaza">
   <title>Peru Travel Guide | References</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/app.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
 </head>
 
 <body>
-    <h1 class="title-flag">
-    <span>References</span>
-     <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
-    </h1> 
- <p>This page lists sources for images and factual information used in the site.</p>
+  <a class="skip-link" href="#main">Skip to content</a>
 
-  <h2>Images</h2>
-  <ul>
-    <li>Hero image: https://images.unsplash.com/photo-1526392060635-9d6019884377</li>
-    <li>Lima image: https://www.metropolitan-touring.com/wp-content/uploads/2024/09/lima-winter-landscape.webp</li>
-    <li>Cusco image: https://www.inkasperuplanet.com/images/banners/cusco.webp</li>
-    <li>Machu Picchu image: https://tse2.mm.bing.net/th/id/OIP.5CkJMBxUP_ueMb620Qh2-gHaEK?rs=1&pid=ImgDetMain&o=7&rm=3</li>
-    <li>Arequipa image: https://www.civitatis.com/blog/wp-content/uploads/2024/05/shutterstock_2187878855-1280x705.jpg</li>
-    <li>Ceviche image: https://andeangreattreks.com/wp-content/uploads/peruvian-ceviche-History-of-ceviche.jpg</li>
-    <li>Aji de Gallina: https://staticfanpage.akamaized.net/wp-content/uploads/sites/22/2021/06/aji-de-gallina-1-1200x675.jpg</li>
-    <li>Pisco Sour: https://www.perudelights.com/wp-content/uploads/2020/05/pisco-sour-recipe-720x720.jpg</li>
-    <li>Chicha Morada: https://i.pinimg.com/originals/14/22/00/14220031a7c2c07492fd56970882eeee.jpg</li>
-  </ul>
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1 class="title-flag">
+          <span data-i18n="refsTitle">References</span>
+          <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        </h1>
+        <p class="tagline" data-i18n="refsTagline">Sources for images and information used on this site.</p>
+      </div>
+      <div class="badge" data-i18n="badgeSources">Sources</div>
+    </div>
 
-  <h2>Information</h2>
-  <ul>
-    <li>Historical timeline: (Add your source link here)</li>
-    <li>Food descriptions: (Add your source link here)</li>
-    <li>Place summaries: (Add your source link here)</li>
-  </ul>
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="wrap nav-grid">
+        <a class="nav-brand" href="index.html" data-i18n="navHome">Home</a>
 
-  <p><a href="index.html">Back to Home</a></p>
+        <div class="nav-links">
+          <a href="places.html" data-i18n="navPlaces">Places</a>
+          <a href="food.html" data-i18n="navFood">Food</a>
+          <a href="history.html" data-i18n="navHistory">History</a>
+          <a href="contact.html" data-i18n="navContact">Contact</a>
+          <a class="active" href="references.html" data-i18n="navReferences">References</a>
+        </div>
+
+        <div class="lang">
+          <label for="langSelect" data-i18n="langLabel">Lang</label>
+          <select id="langSelect" name="langSelect">
+            <option value="en">EN</option>
+            <option value="es">ES</option>
+            <option value="fr">FR</option>
+          </select>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="card">
+      <h2 class="card-title" data-i18n="refsImages">Images</h2>
+      <ul class="bullets">
+        <li>Hero image: https://images.unsplash.com/photo-1526392060635-9d6019884377</li>
+        <li>Lima image: https://www.metropolitan-touring.com/wp-content/uploads/2024/09/lima-winter-landscape.webp</li>
+        <li>Cusco image: https://www.inkasperuplanet.com/images/banners/cusco.webp</li>
+        <li>Machu Picchu image: https://tse2.mm.bing.net/th/id/OIP.5CkJMBxUP_ueMb620Qh2-gHaEK</li>
+        <li>Arequipa image: https://www.civitatis.com/blog/wp-content/uploads/2024/05/shutterstock_2187878855-1280x705.jpg</li>
+        <li>Ceviche image: https://andeangreattreks.com/wp-content/uploads/peruvian-ceviche-History-of-ceviche.jpg</li>
+        <li>Aji de Gallina: https://staticfanpage.akamaized.net/wp-content/uploads/sites/22/2021/06/aji-de-gallina-1-1200x675.jpg</li>
+        <li>Pisco Sour: https://www.perudelights.com/wp-content/uploads/2020/05/pisco-sour-recipe-720x720.jpg</li>
+        <li>Chicha Morada: https://i.pinimg.com/originals/14/22/00/14220031a7c2c07492fd56970882eeee.jpg</li>
+      </ul>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title" data-i18n="refsInfo">Information</h2>
+      <ul class="bullets">
+        <li data-i18n="refsInfo1">General travel regions (Costa/Sierra/Selva): Student summary.</li>
+        <li data-i18n="refsInfo2">History timeline summaries: Written by Armando (student summary).</li>
+        <li data-i18n="refsInfo3">Food/places descriptions: Written by Armando (student summary).</li>
+      </ul>
+
+      <p class="muted" data-i18n="refsTip">
+        Tip: If you used facts from specific websites, add them here as links (stronger references).
+      </p>
+
+      <p><a class="btn ghost" href="index.html" data-i18n="refsBack">Back to Home</a></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted"><span data-i18n="lastMod">Last Modification:</span> <span id="lastModified"></span></p>
+      <p><a href="references.html" data-i18n="navReferences">References</a></p>
+    </div>
+  </footer>
 </body>
 </html>

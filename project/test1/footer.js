@@ -1,5 +1,6 @@
 "use strict";
 
+// Update footer year and last modified using external JS only
 const yearSpan = document.querySelector("#year");
 const modSpan = document.querySelector("#lastModified");
 

@@ -23,33 +23,22 @@
     <div class="wrap header-grid">
       <div>
         <h1 class="title-flag">
-          <span data-i18n="historyTitle">History by Year Range</span>
-          <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        <span>History by Year Range</span>
+        <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
         </h1>
-        <p class="tagline" data-i18n="historyTagline">Select a time period to explore.</p>
+        <p class="tagline">Select a time period to explore.</p>
       </div>
-      <div class="badge" data-i18n="badgeTime">Time</div>
+      <div class="badge">Time</div>
     </div>
 
     <nav class="nav" aria-label="Primary navigation">
       <div class="wrap nav-grid">
-        <a class="nav-brand" href="index.html" data-i18n="navHome">Home</a>
-
+        <a class="nav-brand" href="index.html">Home</a>
         <div class="nav-links">
-          <a href="places.html" data-i18n="navPlaces">Places</a>
-          <a href="food.html" data-i18n="navFood">Food</a>
-          <a class="active" href="history.html" data-i18n="navHistory">History</a>
-          <a href="contact.html" data-i18n="navContact">Contact</a>
-          <a href="references.html" data-i18n="navReferences">References</a>
-        </div>
-
-        <div class="lang">
-          <label for="langSelect" data-i18n="langLabel">Lang</label>
-          <select id="langSelect" name="langSelect">
-            <option value="en">EN</option>
-            <option value="es">ES</option>
-            <option value="fr">FR</option>
-          </select>
+          <a href="places.html">Places</a>
+          <a href="food.html">Food</a>
+          <a class="active" href="history.html">History</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
     </nav>
@@ -57,11 +46,10 @@
 
   <main id="main" class="wrap">
     <section class="card">
-      <h2 class="card-title" data-i18n="chooseRange">Choose a range</h2>
-
-      <label for="rangoHistoria" class="label" data-i18n="yearRangeLabel">Year Range</label>
+      <h2 class="card-title">Choose a range</h2>
+      <label for="rangoHistoria" class="label">Year Range</label>
       <select id="rangoHistoria" name="rangoHistoria">
-        <option value="" selected data-i18n="selectRange">Select a range...</option>
+        <option value="" selected>Select a range...</option>
         <option value="1200-1532">1200–1532 (Inca Expansion)</option>
         <option value="1532-1821">1532–1821 (Colonial Period)</option>
         <option value="1821-1900">1821–1900 (Early Republic)</option>
@@ -69,13 +57,9 @@
         <option value="2000-present">2000–Present (Contemporary Peru)</option>
       </select>
 
-      <p id="mensajeHistoria" class="muted" aria-live="polite" data-i18n="historyHint">
+      <p id="mensajeHistoria" class="muted" aria-live="polite">
         Select a range to display the timeline.
       </p>
-
-      <noscript>
-        <p class="muted" data-i18n="jsNeededHistory">This page needs JavaScript enabled to show the history timeline.</p>
-      </noscript>
 
       <div id="contenedorHistoria" class="stack" aria-live="polite">
         <!-- JS renders history cards here -->
@@ -86,8 +70,8 @@
   <footer class="site-footer">
     <div class="wrap footer-grid">
       <p>&copy; <span id="year"></span> Armando Rebaza</p>
-      <p class="muted"><span data-i18n="lastMod">Last Modification:</span> <span id="lastModified"></span></p>
-      <p><a href="references.html" data-i18n="navReferences">References</a></p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html">References</a></p>
     </div>
   </footer>
 </body>

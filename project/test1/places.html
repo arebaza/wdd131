@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Places to visit in Peru with region filters and favorites saved to localStorage.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru Travel Guide | Places</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/app.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1 class="title-flag">
+        <span>Places to Visit</span>
+        <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        </h1>
+        <p class="tagline">Filter by region and save favorites.</p>
+      </div>
+      <div class="badge">Peru</div>
+    </div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="wrap nav-grid">
+        <a class="nav-brand" href="index.html">Home</a>
+        <div class="nav-links">
+          <a class="active" href="places.html">Places</a>
+          <a href="food.html">Food</a>
+          <a href="history.html">History</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="card">
+      <h2 class="card-title">Top Places</h2>
+      <p class="muted">
+        Use filters to explore Peru’s three natural regions: Coast (Costa), Highlands (Sierra), and Rainforest (Selva).
+      </p>
+
+      <div class="toolbar">
+        <button class="chip" type="button" data-region="all">All Regions</button>
+        <button class="chip" type="button" data-region="costa">Costa</button>
+        <button class="chip" type="button" data-region="sierra">Sierra</button>
+        <button class="chip" type="button" data-region="selva">Selva</button>
+        <p class="muted" id="estadoFavoritosPlaces" aria-live="polite"></p>
+      </div>
+
+      <div id="contenedorLugares" class="grid" aria-live="polite"></div>
+      <p id="mensajeVacioLugares" class="muted hidden">No places found for that region.</p>
+    </section>
+
+    <section class="card">
+      <h2 class="card-title">Travel Planning Notes</h2>
+      <ul class="bullets">
+        <li><strong>Lima:</strong> Great food, museums, and ocean views.</li>
+        <li><strong>Cusco + Sacred Valley:</strong> High altitude—hydrate and plan acclimation.</li>
+        <li><strong>Arequipa:</strong> A beautiful “white city” with access to Colca Canyon.</li>
+        <li><strong>Machu Picchu:</strong> Book early and pack light.</li>
+      </ul>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>

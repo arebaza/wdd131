@@ -271,3 +271,20 @@ input:focus-visible, select:focus-visible, textarea:focus-visible, a:focus-visib
   border-radius: 6px;
   border: 1px solid rgba(255,255,255,0.18);
 }
+/* Language selector */
+.lang {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.lang label {
+  font-weight: 800;
+  color: var(--muted);
+}
+
+.lang select {
+  width: auto;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+}

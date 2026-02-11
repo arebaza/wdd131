@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en-US">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact Peru Travel Guide. Form includes draft-save using localStorage for a better user experience.">
+  <meta name="author" content="Armando Rebaza">
+  <title>Peru Travel Guide | Contact</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles/site.css">
+  <script src="scripts/form.js" defer></script>
+  <script src="scripts/footer.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="wrap header-grid">
+      <div>
+        <h1 class="title-flag">
+         <span>Contact</span>
+         <img class="flag" src="images/peru-flag.svg" loading="lazy" alt="Peru flag">
+        </h1>
+        <p class="tagline">Tell us what you want to explore in Peru.</p>
+      </div>
+      <div class="badge">Form</div>
+    </div>
+
+    <nav class="nav" aria-label="Primary navigation">
+      <div class="wrap nav-grid">
+        <a class="nav-brand" href="index.html">Home</a>
+        <div class="nav-links">
+          <a href="places.html">Places</a>
+          <a href="food.html">Food</a>
+          <a href="history.html">History</a>
+          <a class="active" href="contact.html">Contact</a>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main" class="wrap">
+    <section class="card">
+      <h2 class="card-title">Trip Preferences Form</h2>
+
+      <form id="formContacto" method="get" action="contact.html">
+        <div class="field">
+          <label for="nombre">Name <span class="req" aria-hidden="true">*</span></label>
+          <input id="nombre" name="nombre" type="text" autocomplete="name" required>
+        </div>
+
+        <div class="field">
+          <label for="correo">Email <span class="req" aria-hidden="true">*</span></label>
+          <input id="correo" name="correo" type="email" autocomplete="email" required>
+        </div>
+
+        <fieldset class="field">
+          <legend>Trip Type <span class="req" aria-hidden="true">*</span></legend>
+          <div class="inline">
+            <label><input type="radio" name="tipoViaje" value="Solo" required> Solo</label>
+            <label><input type="radio" name="tipoViaje" value="Couple" required> Couple</label>
+            <label><input type="radio" name="tipoViaje" value="Family" required> Family</label>
+          </div>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Interests (choose any)</legend>
+          <div class="inline">
+            <label><input type="checkbox" name="intereses" value="Food"> Food</label>
+            <label><input type="checkbox" name="intereses" value="History"> History</label>
+            <label><input type="checkbox" name="intereses" value="Nature"> Nature</label>
+            <label><input type="checkbox" name="intereses" value="Museums"> Museums</label>
+          </div>
+        </fieldset>
+
+        <div class="field">
+          <label for="comentarios">Comments</label>
+          <textarea id="comentarios" name="comentarios" rows="5" placeholder="Tell us what you want to explore..."></textarea>
+        </div>
+
+        <div class="actions">
+          <button class="btn" type="submit">Send</button>
+          <button class="btn ghost" type="button" id="btnBorrar">Clear Draft</button>
+        </div>
+
+        <p id="estadoForm" class="muted" aria-live="polite"></p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="wrap footer-grid">
+      <p>&copy; <span id="year"></span> Armando Rebaza</p>
+      <p class="muted">Last Modification: <span id="lastModified"></span></p>
+      <p><a href="references.html">References</a></p>
+    </div>
+  </footer>
+</body>
+</html>
